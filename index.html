@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizMaster Pro | Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-body">
+<div class="login-container fade-in">
+    <div class="login-card">
+        <h2 class="login-title">🎯 QuizMaster Pro</h2>
+
+        <label class="form-label" for="username">Username</label>
+        <input id="username" type="text" class="form-input" placeholder="Enter username" maxlength="20">
+
+        <label class="form-label" for="password">Password</label>
+        <input id="password" type="password" class="form-input" placeholder="Enter password" maxlength="30">
+
+        <button class="btn btn-primary" style="width:100%;margin-top:20px" onclick="login()">Login</button>
+        <p id="error" class="error-message"></p>
+        <p style="margin-top:15px;color:#666;font-size:.85rem;text-align:center;">Demo: any username / password</p>
+    </div>
+</div>
+<script src="auth.js"></script>
+</body>
+</html>

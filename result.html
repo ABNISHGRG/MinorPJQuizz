@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results | QuizMaster Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="results-container">
+            <h2 class="results-title">Quiz Completed!</h2>
+            
+            <div class="score-circle">
+                <div class="score-percent" id="scorePercent">0%</div>
+                <div class="score-text">Your Score</div>
+            </div>
+            
+            <div class="results-breakdown">
+                <div class="stat-card">
+                    <div class="stat-value" id="correctAnswers">0</div>
+                    <div class="stat-label">Correct Answers</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="totalQuestionsResult">0</div>
+                    <div class="stat-label">Total Questions</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="timeSpent">0s</div>
+                    <div class="stat-label">Time Spent</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="accuracy">0%</div>
+                    <div class="stat-label">Accuracy</div>
+                </div>
+            </div>
+            
+            <div class="performance-feedback" id="performanceFeedback">
+                <!-- Performance feedback will be inserted here -->
+            </div>
+            
+            <div class="results-actions">
+                <button class="btn btn-primary" onclick="restartQuiz()">
+                    <span class="btn-icon">🔄</span> Try Again
+                </button>
+                <button class="btn btn-secondary" onclick="goHome()">
+                    <span class="btn-icon">🏠</span> Back to Home
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="results.js"></script>
+</body>
+</html>

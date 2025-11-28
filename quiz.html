@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz | QuizMaster Pro</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <!-- QUIZ SECTION -->
+    <div id="quizWrapper">
+        <div class="quiz-header">
+            <div class="question-counter">Question <span id="currentQ">1</span> / <span id="totalQ">10</span></div>
+            <div class="score-display">Score: <span id="score">0</span></div>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+
+        <div class="timer-container">
+            <div class="timer-bar">
+                <div class="timer-fill" id="timerFill"></div>
+            </div>
+            <div class="timer-text" id="timerText">15s</div>
+        </div>
+
+        <div class="question-box">
+            <h2 class="question-text" id="questionText"></h2>
+            <div class="options-container" id="optionsContainer"></div>
+        </div>
+
+        <div class="quiz-controls">
+            <button class="btn btn-danger" onclick="exitQuiz()">❌ Exit</button>
+            <button class="btn btn-primary" id="nextBtn" onclick="nextQuestion()">Next ➡️</button>
+        </div>
+    </div>
+
+    <!-- RESULTS SECTION -->
+    <div id="resultsWrapper" class="results-container hidden">
+        <h2 class="results-title">Quiz Completed!</h2>
+        <div class="score-circle">
+            <div class="score-percent" id="scorePercent">0%</div>
+            <div class="score-text">Your Score</div>
+        </div>
+        <div class="results-breakdown">
+            <div class="stat-card"><div class="stat-value" id="correctStat">0</div><div class="stat-label">Correct</div></div>
+            <div class="stat-card"><div class="stat-value" id="totalStat">0</div><div class="stat-label">Questions</div></div>
+            <div class="stat-card"><div class="stat-value" id="timeStat">0s</div><div class="stat-label">Time</div></div>
+        </div>
+        <div class="performance-feedback" id="feedback"></div>
+        <div class="results-actions">
+            <button class="btn btn-primary" onclick="location.reload()">🔄 Try Again</button>
+            <button class="btn btn-secondary" onclick="window.location.href='home.html'">🏠 Home</button>
+        </div>
+    </div>
+</div>
+
+<audio id="sndCorrect" src="correct.mp3"></audio>
+<audio id="sndWrong" src="wrong.mp3"></audio>
+<audio id="sndScore" src="score.mp3"></audio>
+
+<script src="auth.js"></script>
+<script src="quiz.js"></script>
+</body>
+</html>
